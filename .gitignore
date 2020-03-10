@@ -1,2 +1,16 @@
-.env
+#IDE
+#.vscode
+
+#node modules
 node_modules
+
+#envoiroment
+#.env
+
+#Banco de Dados
+#.sequelizerc
+#./database
+
+#misc
+yarn-error.log
+yarn.lock
