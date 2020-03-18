@@ -4,11 +4,14 @@ const dbConfig = require('../config/database');
 // carrega os models para inicializa-los
 const Model = require('./ExampleModel');
 
+const Users = require('./Users');
 // cria a conexao com as configuracao do banco de dados
 const connection = new Sequelize(dbConfig);
 
 // inicializa os models
 Model.init(connection);
+
+Users.init(connection);
 
 /*
 //realiza as associacoes
