@@ -5,6 +5,7 @@ const dbConfig = require('../config/database');
 const Model = require('./ExampleModel');
 
 const Users = require('./Users');
+const ChatUser = require('./ChatUser');
 // cria a conexao com as configuracao do banco de dados
 const connection = new Sequelize(dbConfig);
 
@@ -12,6 +13,7 @@ const connection = new Sequelize(dbConfig);
 Model.init(connection);
 
 Users.init(connection);
+ChatUser.init(connection);
 
 /*
 //realiza as associacoes

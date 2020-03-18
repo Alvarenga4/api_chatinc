@@ -7,6 +7,7 @@ const exampleController = require('../controllers/ExampleController');
 
 const UserController = require('../controllers/UsersController');
 const SessionController = require('../controllers/SessionController');
+const ChatUserController = require('../controllers/ChatUserController');
 
 // inicia o router
 const routes = express.Router();
@@ -24,6 +25,10 @@ routes.get('/user/:id/find', UserController.show);
 routes.post('/user/create', UserController.store);
 routes.put('/user/:id/update', UserController.update);
 routes.delete('/user/:id/delete', UserController.delete);
+
+routes.get('/user/:user_id/chat', ChatUserController.show);
+routes.get('/chat/mychats', ChatUserController.myChats);
+routes.post('/chat/create', ChatUserController.store);
 
 // index
 routes.get('/', (req, res) => {

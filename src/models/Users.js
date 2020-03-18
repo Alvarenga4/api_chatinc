@@ -5,30 +5,24 @@ class Users extends Model {
     super.init({
       name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: false
       },
       last_name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: false
       },
       email: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: false
       },
       password: {
         type: DataTypes.STRING,
-        allowNull: false,
-      },
+        allowNull: false
+      }
     }, {
       sequelize
     });
   }
-
-  /*
-  //associacoes
-  static association(model){
-
-  } */
 }
 
 module.exports = Users;
